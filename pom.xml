@@ -36,6 +36,8 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+        
+    
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -62,6 +64,7 @@
 <!--            <artifactId>spring-security-taglibs</artifactId>-->
 <!--        </dependency>-->
         
+        <!-- JSP 템플릿 엔진 -->
         <!-- JSP 템플릿 엔진 -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
