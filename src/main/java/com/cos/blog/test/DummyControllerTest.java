@@ -38,9 +38,23 @@ public class DummyControllerTest {
         return users;
     }
     
+    @DeleteMapping("/dummy/user/{id}")
+    public String delete(@PathVariable int id) {
+        try {
+            userRepository.deleteById(id);
+        } catch (Exception e ) {
+            return "삭제에 실패했습니다.해당 id는 DB에 없습니다.";
+        }
+        
+        return "삭제 되었습니다. id: " + id;
+    
+    }
+    
+    
     //save함수는 id를 전달하면 해당 id에 대한 데이터가 있으면 update를 해주고
     //save함수는 id를 전달하면 해당 id에 대한 데이터가 없으면 insert
     @Transactional //더티 체킹. save를 하지 않아도 update가 가능합니다.
+    //함수 종료시에 자동으로 커밋이 됩니다.
     @PutMapping("/dummy/user/{id}")
     public User updateUser(@PathVariable int id, @RequestBody User requestUser) { //json 데이터를 요청 >> Java Object(Message Converter의 Jackson 라이브러리가 변환해서  받아줍니다.
         System.out.println("id " + id);
@@ -52,10 +66,11 @@ public class DummyControllerTest {
             return new IllegalArgumentException("수정에 실패하였습니다.");
         });
         user.setPassword(requestUser.getPassword());
+        
         user.setEmail(requestUser.getEmail());
         
 //        userRepository.save(user);
-        return null;
+        return user;
         
     }
     
