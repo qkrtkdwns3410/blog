@@ -1,12 +1,13 @@
 package com.cos.blog.handler;
 
 
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 
 @ControllerAdvice //예외발생시 해당 클래스로 옵니다.
+
+
 @RestController
 public class GlobalExceptionHandler {
     
