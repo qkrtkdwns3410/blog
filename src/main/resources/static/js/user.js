@@ -26,8 +26,8 @@ let index = {
 
         }).done(function (resp) {
             alert("회원가입이 완료되었습니다.");
-            alert(resp);
-            location.href = "/blog";
+            console.log(resp);
+            // location.href = "/blog";
         }).fail(function (error) {
             alert(JSON.stringify(arror));
         }); // ajax통신을 이용해서 3개의 데이터를 json으로 변경하여 insert요청합니다.
