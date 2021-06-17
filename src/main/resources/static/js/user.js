@@ -3,6 +3,10 @@ let index = {
         $("#btn_save").on("click", () => { //function(){} , () = >{} this를 바인딩하기 위하여
             this.save();
         });
+        $("#btn-login").on("click", () => { //function(){} , () = >{} this를 바인딩하기 위하여
+            this.login();
+        });
+
     },
     save: function () {
         // alert('user의 save함수 호출됨');
