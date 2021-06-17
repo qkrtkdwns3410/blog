@@ -29,7 +29,7 @@ let index = {
             console.log(resp);
             // location.href = "/blog";
         }).fail(function (error) {
-            alert(JSON.stringify(arror));
+            alert(JSON.stringify(error));
         }); // ajax통신을 이용해서 3개의 데이터를 json으로 변경하여 insert요청합니다.
     }
 
