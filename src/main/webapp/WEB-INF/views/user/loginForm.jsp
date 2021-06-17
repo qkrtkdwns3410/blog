@@ -17,7 +17,7 @@
     
     <div class="form-group form-check">
       <label class="form-check-label">
-        <input class="form-check-input" type="checkbox"> Remember me
+        <input class="form-check-input" type="checkbox"> 아이디 기억하기
       </label>
     </div>
     
@@ -26,5 +26,5 @@
     <button id="btn-login" class="btn btn-primary">로그인</button>
 
 </div>
-<script src ="/blog/js/user.js"></script>
+<script src ="/js/user.js"></script>
 <%@ include file="../layout/footer.jsp" %>

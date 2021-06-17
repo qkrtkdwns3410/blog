@@ -23,7 +23,7 @@ let index = {
         $.ajax({
             //회원가입 수행 요청
             type: "POST",
-            url: "/blog/api/user",
+            url: "/api/user",
             data: JSON.stringify(data),
             contentType: "application/json;charset=UTF-8", //body데이터가 어떤 타입인지 (MIME)
             dataType: "json" //요청을 서버로 해서 응답이 왔을경우 기본적으로 모든 것이 문자열 입니다.(생긴게 json이라면 >>javascript
@@ -31,7 +31,7 @@ let index = {
         }).done(function (resp) {
             alert("회원가입이 완료되었습니다.");
             console.log(resp);
-            // location.href = "/blog";
+            location.href = "/";
         }).fail(function (error) {
             alert(JSON.stringify(error));
         }); // ajax통신을 이용해서 3개의 데이터를 json으로 변경하여 insert요청합니다.
@@ -50,14 +50,14 @@ let index = {
         $.ajax({
             //회원가입 수행 요청
             type: "POST",
-            url: "/blog/api/user/login",
+            url: "/api/user/login",
             data: JSON.stringify(data),
             contentType: "application/json;charset=UTF-8", //body데이터가 어떤 타입인지 (MIME)
             dataType: "json" //요청을 서버로 해서 응답이 왔을경우 기본적으로 모든 것이 문자열 입니다.(생긴게 json이라면 >>javascript
 
         }).done(function (resp) {
             alert("로그인이 완료되었습니다.");
-            location.href = "/blog";
+            location.href = "/";
         }).fail(function (error) {
             alert(JSON.stringify(error));
         }); // ajax통신을 이용해서 3개의 데이터를 json으로 변경하여 insert요청합니다.
