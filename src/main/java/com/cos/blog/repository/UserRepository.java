@@ -1,9 +1,14 @@
 package com.cos.blog.repository;
 
 import com.cos.blog.model.User;
+import org.springframework.data.domain.Example;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.Optional;
+
 public interface UserRepository extends JpaRepository<User, Integer> {
+    //select * FROM user WHERE username =1?
+    Optional<User> findByUsername(String username);
 }
 //로그인을 위한 함수 만들기
 

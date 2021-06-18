@@ -4,7 +4,7 @@ let index = {
             this.save();
         });
         $("#btn-login").on("click", () => { //function(){} , () = >{} this를 바인딩하기 위하여
-            this.login();
+            this.save();
         });
 
     },
@@ -35,6 +35,6 @@ let index = {
         }).fail(function (error) {
             alert(JSON.stringify(error));
         }); // ajax통신을 이용해서 3개의 데이터를 json으로 변경하여 insert요청합니다.
-    }
+    },
 };
 index.init();
