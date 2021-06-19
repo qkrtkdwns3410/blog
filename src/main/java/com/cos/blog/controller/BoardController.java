@@ -17,7 +17,7 @@ public class BoardController {
     //USER의 권한이 필요합니다.
     @GetMapping("/board/saveForm")
     public String saveForm() {
-        return "board/savaForm";
+        return "board/saveForm";
     }
     
 }

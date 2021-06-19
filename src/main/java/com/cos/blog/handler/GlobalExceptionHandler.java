@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestController;
 
 @ControllerAdvice //예외발생시 해당 클래스로 옵니다.
-
-
 @RestController
 public class GlobalExceptionHandler {
     
