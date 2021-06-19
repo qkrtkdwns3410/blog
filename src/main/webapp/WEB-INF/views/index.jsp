@@ -9,11 +9,11 @@
 
 <%@ include file="layout/header.jsp" %>
 <div class="container">
-    <c:forEach var="board" items="${boards.content}">
+    <c:forEach var="board" items="${boards.content}"><%--반복문입니다.--%>
         <div class="card m-3">
             <div class="card-body">
                 <h4 class="card-title">${board.title}</h4>
-                <a href="#" class="btn btn-primary">상세보기</a>
+                <a href="/board/${board.id}" class="btn btn-primary">상세보기</a>
             </div>
         </div>
     </c:forEach>
