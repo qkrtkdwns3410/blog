@@ -23,7 +23,7 @@ public class BoardController {
     @GetMapping({"", "/"})
     public String index(Model model) {
         model.addAttribute("boards", boardService.글목록());
-        return "index";
+        return "index"; //viewResolver작동!! return 갑세 application.yml의 프리픽스 .. 붙여줍니다.
     }
     
     //USER의 권한이 필요합니다.
