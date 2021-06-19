@@ -28,7 +28,7 @@ public class Board {
     @Lob //대용량 데이터
     private String content; //섬머노트 라이브러리 <html>태그가 섞여서 디자인이 됨.
     
-    @ColumnDefault("'0'")
+    
     private int count; //조회수
     
     @ManyToOne(fetch = FetchType.EAGER) //여러 게시판에 하나의 유저네임이기에 패치를 자주합니다.

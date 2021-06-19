@@ -1,4 +1,4 @@
-c<%--
+<%--
   Created by IntelliJ IDEA.
   User: psj
   Date: 2021-06-13
@@ -7,7 +7,7 @@ c<%--
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%@ include file="../layout/header.jsp"%>
+<%@ include file="../layout/header.jsp" %>
 <div class="container">
     
     <form action="/auth/loginProc" method="post">
@@ -15,10 +15,10 @@ c<%--
             <label for="title">Title</label>
             <input type="text" class="form-control" placeholder="Enter title" id="title">
         </div>
-    
+        
         <div class="form-group">
-            <label for="comment">Content:</label>
-            <textarea class="form-control" rows="5" id="content"></textarea>
+            <label for="content">Content:</label>
+            <textarea class="form-control summernote" rows="5" id="content"></textarea>
         </div>
         
         <button id="btn-save" class="btn btn-primary">글쓰기 완료</button>
@@ -27,7 +27,14 @@ c<%--
 
 </div>
 
-<%@ include file="../layout/footer.jsp"%>
+<script>
+    $('.summernote').summernote({
+        tabsize: 2,
+        height: 300
+    });
+</script>
+<script src="/js/board.js"></script>
+<%@ include file="../layout/footer.jsp" %>
 
 
 
