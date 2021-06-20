@@ -9,6 +9,9 @@ server:
 
 spring:
   mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
     view:
       prefix: /WEB-INF/views/
       suffix: .jsp
